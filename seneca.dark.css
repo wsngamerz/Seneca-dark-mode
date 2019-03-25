@@ -1,0 +1,484 @@
+/* Variables */
+:root {
+	--color-lightblue-500: #03A9F4;
+	
+	--color-green-500: #4CAF50;
+	--color-green-700: #388E3C;
+	--rgba-green-500: rgba(76, 175, 80, 0.5);
+	
+	--color-gray-50: #FAFAFA;
+	--color-gray-100: #F5F5F5;
+	--color-gray-200: #F5F5F5;
+	--color-gray-300: #E0E0E0;
+	--color-gray-400: #BDBDBD;
+	--color-gray-500: #9E9E9E;
+	--color-gray-900: #212121;
+	
+	--color-bluegray-500: #607D8B;
+	--color-bluegray-600: #546E7A;
+	--color-bluegray-700: #455A64;
+	--color-bluegray-800: #37474F;
+	--color-bluegray-900: #263238;
+	--rgba-bluegray-900: rgba(38, 50, 56, 0.5);
+	--rgba-bluegray-900--80: rgba(38, 50, 56, 0.8);
+}
+
+/*
+	Sitewide Styles
+*/
+
+body {
+	background-color: var(--color-bluegray-700);
+}
+
+/*
+	Titles / Text
+*/
+
+.StudentDashboardPageRowTitle,
+.StudentAssignmentCard__courseName,
+.StudentAssignmentCard__dueDate,
+.AssignmentProgressIndicator p,
+.LeaderboardRow__rank,
+.LeaderboardRow__user__display-name,
+.LeaderboardRow__stat,
+.StudentDashboardPageBackButton__icon,
+.StudentDashboardPageBackButton__text,
+h1[class*="StudentDashboardPageTitle_title"],
+h1[class*="StudentSettingsPage_title__1gOBK"],
+div[class*="ClassCodeCard_title"],
+h2[class*="ChangeEmailForm_formTitle"],
+.LeaderboardLockedModal__title,
+.ImageHeaderMessage__title,
+.PersonalInformationForm__title,
+.FieldLabelWrapper__label,
+.DateOfBirthDropdowns__label,
+h1[class*="NoSubscriptionPage_title"],
+div[class*="SubscriptionProductOverview_title"],
+div[class*="SubscriptionProductPrice_price"],
+span[class*="FeatureDescription_text"],
+.FeedbackForm__title,
+.SignUpFormDumbWrapper__heading,
+h1[class*="CourseHomePage_topMessageName"],
+h1[class*="CourseHomePage_text"],
+span[class*="HeaderContent_text"] {
+	color: var(--color-gray-100) !important;
+}
+
+.AssignmentSubsectionRow__info,
+.ImageHeaderMessage__message,
+.Leaderboard__updatedAt,
+.FieldLabelWrapper__label div,
+.FeedbackForm__description,
+.SignUpFormDumbWrapper__subHeading,
+.SignUpFormDumbWrapper__footer p {
+	color: var(--color-gray-400);
+}
+
+.StudentDashboardPageBackButton__link:hover .StudentDashboardPageBackButton__text {
+	color: var(--color-gray-300);
+}
+
+
+div[class*="ClassCodeCard_code"] {
+	background: none;
+	color: var(--color-gray-100);
+	-webkit-text-fill-color: var(--color-gray-100);
+}
+
+/* Links */
+
+.DashboardSectionShowMoreLink,
+.ArchiveCourseButton__iconCont,
+.BackButtonWithText.dark,
+a[href="/reset-password"],
+a[href="/sign-up"]:not(.FrontDoor__topLink) {
+	color: var(--color-gray-300);
+}
+
+.DashboardSectionShowMoreLink:hover,
+.ArchiveCourseButton__iconCont:hover,
+.BackButtonWithText.dark:hover,
+a[href="/reset-password"]:hover {
+	color: var(--color-gray-500);
+	cursor: pointer;
+}
+
+/*
+	Buttons
+*/
+
+.PrimaryButton {
+	box-shadow: 0 0 6px 1px var(--rgba-bluegray-900);
+}
+
+.PrimaryButton.PrimaryButtonGreen,
+.PrimaryButton.positive {
+	background-color: var(--color-green-500);
+}
+
+.PrimaryButton.PrimaryButtonGreen:hover,
+.PrimaryButton.positive:hover {
+	background-color: var(--color-green-700);
+	box-shadow: 0 0 6px 1px var(--rgba-bluegray-900);
+}
+
+.PrimaryButton.check,
+.PrimaryButton.PrimaryButtonWhite,
+button[class*="MultipleChoiceButton_button"] {
+	background-color: var(--color-bluegray-900);
+	border: none;
+	color: var(--color-gray-100);
+}
+
+.PrimaryButton.check:hover,
+.PrimaryButton.PrimaryButtonWhite:hover,
+button[class*="MultipleChoiceButton_button"]:not([disabled]):hover {
+	background-color: var(--color-bluegray-700);
+	border: none;
+	color: var(--color-gray-100);
+	box-shadow: 0 0 6px 1px var(--rgba-bluegray-900);
+}
+
+.AddButtonBlue {
+	border-color: var(--color-lightblue-500);
+	color: var(--color-lightblue-500);
+}
+
+/*
+	Form Elements
+*/
+
+/* Inputs */
+
+.SettingsFormInput__input,
+.List__WordInput__input {
+	background-color: var(--color-bluegray-900);
+	border: none;
+	color: var(--color-gray-100);
+}
+
+.PersonalInformationForm__emailDisabledInput {
+	background: transparent;
+}
+
+/* Dropdown menus */
+
+.Standard__dropdown__control,
+.Form__dropdown__control {
+	background-color: var(--color-bluegray-900);
+	border: none;
+	box-shadow: none !important;
+}
+
+.Premium__dropdown__control {
+	border: none;
+}
+
+.Premium__dropdown__control div {
+	border: none;
+}
+
+.Standard__dropdown__control div,
+.Form__dropdown__control div {
+	color: var(--color-gray-100);
+}
+
+.Standard__dropdown__option,
+.Standard__dropdown__option--is-selected,
+.Standard__dropdown__option--is-focused,
+.Form__dropdown__option,
+.Form__dropdown__option--is-selected,
+.Form__dropdown__option--is-focused {
+	background-color: var(--color-bluegray-900) !important;
+	color: var(--color-gray-100) !important;
+}
+
+.Standard__dropdown__option--is-focused,
+.Form__dropdown__option--is-focused {
+	background-color: var(--color-bluegray-800) !important;
+	cursor: pointer;
+}
+
+/*
+	Tick
+*/
+
+.Tick__tick--checked::before,
+.Tick__tick--checked::after {
+	background: none !important;
+	background-color: var(--color-green-500) !important;
+}
+
+.Tick__wrapper--checked {
+	border-color: var(--color-green-500);
+}
+
+.Tick__tick:not(.Tick__tick--white):not(.Tick__tick--no-border):before {
+	box-shadow: 0 0 0 1px var(--color-bluegray-800);
+}
+
+/* 
+	Tabs
+*/
+
+.Tab,
+.RouteTabs__tab,
+div[class*="PaymentFrequencyToggle_option"] {
+	color: var(--color-gray-100);
+}
+
+.Tab--active,
+.RouteTabs__tab--active {
+	border-bottom-color: var(--color-bluegray-800);
+}
+
+div[class*="PaymentFrequencyToggle_option--selected"]:after {
+	background: var(--color-bluegray-900);
+}
+
+.Tabs__tabRow,
+.RouteTabs {
+	border-bottom: none;
+}
+
+/*
+	Settings Page
+*/
+
+div[class*="NoSubscriptionPage_wrapper"] {
+	background-color: var(--color-bluegray-800);
+	border-radius: 8px;
+}
+
+/*
+	Dashboard Page
+*/
+
+/* Statistic cards */
+
+.CourseStatsBox__outer {
+	background-color: var(--color-bluegray-800);
+	box-shadow: 0 0 6px 1px var(--rgba-bluegray-900);
+}
+
+.CourseStatsBox__labelText {
+	color: var(--color-gray-100);
+}
+
+.CourseStatsBox__number {
+	color: var(--color-gray-100);
+}
+
+/* Dashboard cards */
+
+.Card__outer {
+	background-color: var(--color-bluegray-800);
+	box-shadow: 0 0 6px 1px var(--rgba-bluegray-900);
+	color: var(--color-gray-100);
+}
+
+.Card__outer--clickable:hover {
+	box-shadow: 0 2px 12px 6px var(--rgba-bluegray-900);
+}
+
+div[class*="StudentCourseCard_contents"],
+.AddCourseCard,
+.AddButtonWithText__subtitle {
+	background-color: var(--color-bluegray-800);
+	color: var(--color-gray-100) !important;
+}
+
+/*
+	Leaderboards
+*/
+
+.AvatarCircle__wrapper {
+	background-color: var(--color-bluegray-900);
+}
+
+/* Loading Leaderboard */
+
+.AvatarCircle__loading,
+.TextPlaceholder {
+	background: var(--color-bluegray-900);
+}
+
+/* Leaderboard Error */
+
+.SectionErrorWithRetry {
+	background: var(--color-bluegray-800);
+	color: var(--color-gray-100);
+}
+
+/* Leaderboard Header Conetnt */
+
+.LeaderboardHeader {
+	border-bottom: none;
+}
+
+/* Circular progress bar */
+
+path[class*="CircularBar_trail"] {
+	stroke: var(--color-bluegray-900);
+}
+
+path[class*="CircularBar_path"] {
+	stroke: var(--color-green-500) !important;
+}
+
+/* Premium Course Tag */
+div[class*="SubscriptionTierTag_container"] {
+	color: var(--color-gray-900);
+	mix-blend-mode: normal;
+}
+
+/* Login Page */
+.FrontDoor__background--shape {
+	content: url("https://svgshare.com/i/C02.svg");
+}
+
+.FrontDoor__background--bottom {
+	background-color: var(--color-bluegray-700);
+}
+
+/*
+	Classroom / Course Page
+*/
+
+
+i[class*="HeaderContent_exitButtonIcon"],
+i[class*="SidebarSkeleton_closeIcon"]{
+	color: var(--color-gray-200);
+}
+
+div[class*="HeaderContent_logo"] {
+	background: url('https://svgshare.com/i/Bz8.svg') no-repeat;
+}
+
+div[class*="SidebarSkeleton_container"] {
+	background-color: var(--color-bluegray-700);
+	box-shadow: 2px 0 12px 0 var(--rgba-bluegray-900);
+}
+
+div[class*="CourseHomePage_infobar__wrapper"] {
+	background-color: var(--color-bluegray-800);
+	box-shadow:  0 2px 16px 0 var(--rgba-bluegray-900);
+}
+
+div[class*="CourseHomePage_infobar__separator"] {
+	border-bottom: 1px solid var(--color-bluegray-600);
+}
+
+div[class*="SectionRow_wrapper_top"] {
+	background-color: var(--color-bluegray-700);
+	box-shadow: 0 0 6px 2px var(--rgba-bluegray-900);
+}
+
+div[class*="SectionRow_section"]:hover:not(.SectionRow_section__selected__2WuSJ) {
+	background-color: var(--color-bluegray-800);
+}
+
+div[class*="SectionRow_section"]:hover:not(.SectionRow_section__selected__2WuSJ) div,
+div[class*="SectionRow_title"] {
+	color: var(--color-gray-100);
+}
+
+.List__row--correct .List__index {
+	background: var(--color-green-500);
+	border: 1px solid var(--color-green-500);
+}
+
+.List__row--correct .List__value {
+	color: var(--color-green-500);
+}
+
+button[class*="MultipleChoiceButton_button--correct"] {
+	box-shadow: 0 0 8px 3px var(--rgba-green-500);
+}
+
+.Breadcrumbs_container .Breadcrumb_outer .Breadcrumb__name,
+.MessageStructureWithSections__textContent,
+.ShareLinkWithIcon__text,
+.TitleSection__title p,
+.TitleSection__explanation p,
+.List_statement p,
+.List__value,
+.List__index,
+.ImageLabel__title,
+.ImageList_statement,
+div[class*="MultipleChoiceQuestion_question"] div[class*="MultipleChoiceQuestion_text"],
+div[class*="MultipleChoiceButton_text"],
+.ImageDescription__title p, 
+.WordfillSentence__word {
+	color: var(--color-gray-100);
+}
+
+.MessageStructure__outer {
+	background-color: var(--color-bluegray-800);
+	box-shadow: 0 0 6px 1px var(--rgba-bluegray-900);
+}
+
+div[class*="Session_controlBar__wrapper"] {
+	background-color: var(--color-bluegray-700);
+}
+
+div[class*="Session_progressBar"] {
+	background-color: var(--color-bluegray-700);
+	box-shadow: 0 0 6px 1px var(--rgba-bluegray-900);
+}
+
+div[class*="ProgressBar_inner"] div {
+	background: var(--color-bluegray-800);
+}
+
+div[class*="ProgressBar_inner"] div[class*="foreground"] {
+	background: var(--color-green-500);
+}
+
+.ModuleStyleWrapper__wrapper {
+	background-color: var(--color-bluegray-800);
+	box-shadow: 0 0 6px 1px var(--rgba-bluegray-900);
+}
+
+.CardLabel__labelDot {
+	background: var(--color-bluegray-800)
+}
+
+.ConceptCardDesktop__card {
+	box-shadow: 0 0 6px 1px var(--rgba-bluegray-900);
+}
+
+.ConceptCardDesktop__cardTitle,
+.ConceptCardDesktop__cardDescription,
+.ImageList__answerBox {
+	background: var(--rgba-bluegray-900--80);
+	color: var(--color-gray-300);
+}
+
+.ImageLabel__Label__label {
+	background: var(--color-bluegray-900);
+	box-shadow: 0 0 6px 1px var(--rgba-bluegray-900);
+}
+
+.ImageList__value {
+	color: var(--color-gray-300);
+}
+
+.NavDot--active {
+	box-shadow: none;
+}
+
+.NavDot__inner {
+	background-color: var(--color-green-500);
+}
+
+.ProgressIndicator__wrapper--background {
+	background-color: var(--color-bluegray-900);
+	box-shadow: 0 0 6px 1px var(--rgba-bluegray-900);
+	color: var(--color-gray-300);
+}
+
+.ImageDescription__image {
+	box-shadow: 0 0 6px 1px var(--rgba-bluegray-900);
+}
